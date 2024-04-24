@@ -1,8 +1,6 @@
 package org.me.hexagone_gestion_user_infra.adapters.api;
 
-import business_logic.models.User;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,12 +25,12 @@ public class UserController {
         this.getAllUsersApi = getAllUsersApi;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/creer-un-utilisateur")
     public ResponseEntity<User> createUser(User user) {
         return ResponseEntity.ok(createUserApi.createUser(user));
     }
 
-    @GetMapping("/getAllUsers")
+    @GetMapping("/liste-des-utilisateurs")
     public ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok(getAllUsersApi.getAllUsers());
     }

@@ -1,6 +1,6 @@
 package ports.api;
 
-import business_logic.models.User;
+import models.User;
 
 import java.util.List;
 

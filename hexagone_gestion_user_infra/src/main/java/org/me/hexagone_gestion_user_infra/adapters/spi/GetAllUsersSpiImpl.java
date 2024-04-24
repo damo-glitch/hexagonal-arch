@@ -1,6 +1,6 @@
 package org.me.hexagone_gestion_user_infra.adapters.spi;
 
-import business_logic.models.User;
+import models.User;
 import org.me.hexagone_gestion_user_infra.Repositories.UserRepository;
 import org.me.hexagone_gestion_user_infra.mapper.UserMapper;
 import org.springframework.stereotype.Component;
@@ -19,6 +19,6 @@ public class GetAllUsersSpiImpl implements IGetAllUsersSpi {
 
     @Override
     public List<User> getAllUsers() {
-        return userRepository.findAll().stream().map(UserMapper::mapfromUserEntityToUser).toList();
+        return userRepository.findAll().stream().map(UserMapper::mapToUser).toList();
     }
 }

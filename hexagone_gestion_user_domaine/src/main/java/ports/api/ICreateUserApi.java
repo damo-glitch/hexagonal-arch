@@ -1,6 +1,6 @@
 package ports.api;
 
-import business_logic.models.User;
+import models.User;
 
 public interface ICreateUserApi {
     User createUser(User user);
